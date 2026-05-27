@@ -60,8 +60,8 @@ To run a built API binary: `pnpm --filter @infopoly/api run start:built` (after 
 
 | Public hostname | Local service |
 |-----------------|---------------|
-| `https://infopoly.skoldrum.online` | `http://localhost:3011` (Vite) |
-| `https://api-infopoly.skoldrum.online` | `http://localhost:3010` (Nest) |
+| [https://todo.skoldrum.online](https://todo.skoldrum.online/login) | `http://localhost:3011` (Vite) |
+| [https://todo-api.skoldrum.online](https://todo-api.skoldrum.online/api/docs) | `http://localhost:3010` (Nest) |
 
 ## Scripts
 
