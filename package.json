@@ -1,0 +1,35 @@
+{
+  "name": "infopoly-monorepo",
+  "version": "0.0.1",
+  "private": true,
+  "description": "To-do — task manager monorepo (API + web). Presentation build: local dev + Cloudflare Tunnel.",
+  "packageManager": "pnpm@10.28.1",
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "@nestjs/core",
+      "@prisma/client",
+      "@prisma/engines",
+      "bcrypt",
+      "esbuild",
+      "prisma"
+    ]
+  },
+  "scripts": {
+    "prepare": "husky",
+    "dev": "turbo run dev --filter='./apps/*'",
+    "start:prod": "turbo run start:prod --filter='./apps/*'",
+    "build": "turbo run build",
+    "lint": "turbo run lint:check --filter='./apps/*'",
+    "lint:check": "turbo run lint:check --filter='./apps/*'",
+    "lint:fix": "turbo run lint --filter='./apps/*'",
+    "format": "turbo run format --filter='./apps/*'",
+    "format:check": "turbo run format:check",
+    "test:check": "turbo run test:check --filter=@infopoly/api",
+    "db:migrate": "pnpm --filter @infopoly/api exec prisma migrate dev",
+    "prisma:generate": "pnpm --filter @infopoly/api exec prisma generate"
+  },
+  "devDependencies": {
+    "husky": "^9.1.7",
+    "turbo": "^2.9.5"
+  }
+}
