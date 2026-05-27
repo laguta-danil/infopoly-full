@@ -58,20 +58,10 @@ To run a built API binary: `pnpm --filter @infopoly/api run start:built` (after 
 
 ## Cloudflare Tunnel (presentation)
 
-Tunnel config lives in **Cloudflare Zero Trust** (not in this repo). Map public hostnames to local dev servers:
-
 | Public hostname | Local service |
 |-----------------|---------------|
 | `https://infopoly.skoldrum.online` | `http://localhost:3011` (Vite) |
 | `https://api-infopoly.skoldrum.online` | `http://localhost:3010` (Nest) |
-
-Before demo via tunnel:
-
-1. In `apps/web/.env` set `VITE_API_BASE_URL=https://api-infopoly.skoldrum.online`
-2. In `apps/api/.env` ensure `CORS_ORIGIN` includes `https://infopoly.skoldrum.online` (see `.env.example`)
-3. Restart `pnpm start:prod` or `pnpm dev`
-
-Ports **3010/3011** do not conflict with GaB tunnel ports (5556–5559).
 
 ## Scripts
 
