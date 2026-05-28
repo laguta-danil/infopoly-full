@@ -50,19 +50,6 @@ pnpm start:prod
 
 Register with a password that has **at least 8 characters, one uppercase letter, and one digit** (e.g. `Password1`).
 
-### `start:prod` vs production build
-
-`pnpm start:prod` intentionally runs **development mode** (`NODE_ENV=development`, Nest watch + Vite dev server) on ports 3010/3011 — for local/tunnel presentation, not a compiled production deploy.
-
-To run a built API binary: `pnpm --filter @infopoly/api run start:built` (after `pnpm build`).
-
-## Cloudflare Tunnel (presentation)
-
-| Public hostname | Local service |
-|-----------------|---------------|
-| [https://todo.skoldrum.online](https://todo.skoldrum.online/login) | `http://localhost:3011` (Vite) |
-| [https://todo-api.skoldrum.online](https://todo-api.skoldrum.online/api/docs) | `http://localhost:3010` (Nest) |
-
 ## Scripts
 
 ```bash
